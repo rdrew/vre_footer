@@ -1,0 +1,29 @@
+<?php
+
+function vre_footer_theme() {
+  return array(
+    'vre_footer_footer' => array('arguments' => array(), 'template' => 'vre-footer-footer')
+  );
+}
+
+function vre_footer_block_info() {    
+  $blocks['vre_footer'] = array(
+    // info: The name of the block.
+    'info' => t('VRE Footer'),
+  );
+
+  return $blocks;
+}
+
+function vre_footer_block_view($delta = '') {
+  // The $delta parameter tells us which block is being requested.
+  switch ($delta) {
+    case 'vre_footer':
+      // Create your block content here
+      $block['subject'] = t('');
+      $block['content'] = theme('vre_footer_footer');
+      break;
+  }
+
+  return $block;
+}

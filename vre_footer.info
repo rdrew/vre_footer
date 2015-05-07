@@ -1,0 +1,6 @@
+name = VRE Footer
+description = creates a block of links to be used in the footer of UPEI VREs
+core = 7.x
+files[] = vre_footer.module
+files[] = vre-footer-footer.tpl.php
+stylesheets[all][] = vre_footer.css
